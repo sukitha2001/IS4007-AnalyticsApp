@@ -73,7 +73,7 @@ def render_customer_analytics():
         best_segment = rfm.groupby("Segment")["Monetary"].sum().idxmax()
         cols = st.columns(3)
         with cols[0]:
-            metric_card("Customer Value", f"${total_value:,.0f}", "Total segment revenue", "$", "positive")
+            metric_card("Customer Value", f"{total_value:,.0f}", "Total segment revenue", "$", "positive")
         with cols[1]:
             metric_card("Best Segment", best_segment, "Highest revenue contribution", "◎")
         with cols[2]:
