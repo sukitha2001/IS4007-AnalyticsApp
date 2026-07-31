@@ -52,7 +52,7 @@ def render_revenue_forecasting():
             with cols[1]:
                 metric_card("Next Forecast", f"{next_month:,.0f}", f"{forecast_change:+.1f}% vs latest actual", "$", "positive" if forecast_change >= 0 else "negative")
             with cols[2]:
-                metric_card("Forecast Total", f"${forecast_total:,.0f}", f"Next {months_to_forecast} months", "positive")
+                metric_card("Forecast Total", f"${forecast_total:,.0f}", f"Next {months_to_forecast} months")
             
             # Plotting
             fig = go.Figure()
