@@ -1,0 +1,11 @@
+campaign_id,campaign_name,start_date,end_date,offer_type,campaign_cost
+CMP001,New Year Kickoff,2023-01-05,2023-01-20,Seasonal Offer,8000
+CMP002,Valentine Bundle,2023-02-10,2023-02-18,Bundle,5000
+CMP003,Mid-Year Clearance,2023-06-01,2023-06-15,Discount,6000
+CMP004,Back to School,2023-08-15,2023-08-31,Discount,7000
+CMP005,Festive Cashback,2023-11-20,2023-12-05,Cashback,12000
+CMP006,Year End Blowout,2023-12-15,2023-12-31,Seasonal Offer,15000
+CMP007,New Year Kickoff 2024,2024-01-05,2024-01-20,Seasonal Offer,9000
+CMP008,Anniversary Sale,2024-04-01,2024-04-10,Discount,6500
+CMP009,Festive Cashback 2024,2024-11-20,2024-12-05,Cashback,13000
+CMP010,Year End Blowout 2024,2024-12-15,2024-12-31,Seasonal Offer,16000

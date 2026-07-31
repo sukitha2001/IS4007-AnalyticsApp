@@ -1,0 +1,31 @@
+product_id,product_name,category,standard_price,cost_price,margin_percentage,active_status
+P100,Electronics Purpose 1,Electronics,193.52,109.3,43.52,Active
+P101,Home Brother 2,Home & Living,368.68,247.16,32.96,Active
+P102,Apparel Ago 3,Apparel,86.45,83.18,3.78,Active
+P103,Beauty Site 4,Beauty & Personal Care,38.46,22.7,40.99,Active
+P104,Sports Face 5,Sports & Outdoors,304.55,194.17,36.24,Active
+P105,Office Election 6,Office Supplies,20.09,11.23,44.1,Active
+P106,Electronics Dog 7,Electronics,417.9,328.59,21.37,Active
+P107,Home Chair 8,Home & Living,99.09,95.21,3.92,Active
+P108,Apparel Since 9,Apparel,159.08,110.17,30.74,Active
+P109,Beauty Blue 10,Beauty & Personal Care,221.65,169.04,23.74,Active
+P110,Sports Require 11,Sports & Outdoors,309.81,250.37,19.18,Active
+P111,Office Sit 12,Office Supplies,153.15,113.35,25.99,Active
+P112,Electronics Wait 13,Electronics,233.47,143.45,38.56,Active
+P113,Home Offer 14,Home & Living,107.84,75.03,30.43,Active
+P114,Apparel Begin 15,Apparel,300.28,251.05,16.39,Active
+P115,Beauty Performance 16,Beauty & Personal Care,307.7,295.85,3.85,Active
+P116,Sports Knowledge 17,Sports & Outdoors,41.88,23.68,43.47,Active
+P117,Office Almost 18,Office Supplies,483.16,293.51,39.25,Active
+P118,Electronics All 19,Electronics,159.26,130.7,17.93,Active
+P119,Home Better 20,Home & Living,345.27,247.89,28.2,Active
+P120,Apparel Discover 21,Apparel,69.8,48.96,29.86,Active
+P121,Beauty Early 22,Beauty & Personal Care,26.85,15.5,42.28,Active
+P122,Sports Mouth 23,Sports & Outdoors,136.8,128.16,6.31,Active
+P123,Office Play 24,Office Supplies,162.74,112.94,30.6,Active
+P124,Electronics Agreement 25,Electronics,277.89,220.8,20.55,Active
+P125,Home Option 26,Home & Living,485.1,299.53,38.25,Active
+P126,Apparel Decide 27,Apparel,470.35,273.53,41.84,Active
+P127,Beauty Sense 28,Beauty & Personal Care,302.97,279.92,7.61,Active
+P128,Sports Rate 29,Sports & Outdoors,53.36,42.22,20.88,Discontinued
+P129,Office Science 30,Office Supplies,32.16,24.2,24.76,Discontinued

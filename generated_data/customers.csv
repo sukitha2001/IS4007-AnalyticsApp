@@ -1,0 +1,121 @@
+customer_id,customer_type,segment,acquisition_channel,customer_since,location_category,business_size
+C1000,Individual,Standard,Referral,2022-02-20,Suburban,N/A
+C1001,Individual,Premium,Online,2023-11-16,Suburban,N/A
+C1002,SME,New,Online,2023-12-18,Urban,Large
+C1003,Individual,New,Walk-in,2024-02-11,Urban,N/A
+C1004,Individual,Standard,Walk-in,2023-03-22,Urban,N/A
+C1005,Individual,Budget,Sales Team,2023-03-25,Suburban,N/A
+C1006,Individual,Budget,Online,2024-05-30,Urban,N/A
+C1007,SME,Standard,Online,2023-05-03,Other,Medium
+C1008,Individual,Standard,Walk-in,2024-03-10,Urban,N/A
+C1009,Corporate,Standard,Online,2022-02-03,Urban,Medium
+C1010,SME,Premium,Online,2022-12-14,Urban,Small
+C1011,Individual,New,Referral,2022-04-05,Suburban,N/A
+C1012,Individual,New,Referral,2022-03-13,Suburban,N/A
+C1013,SME,Budget,Sales Team,2023-07-05,Urban,Large
+C1014,SME,Standard,Walk-in,2022-06-03,Urban,Small
+C1015,SME,Standard,Walk-in,2022-09-07,Suburban,Large
+C1016,SME,Budget,Online,2023-11-05,Urban,Large
+C1017,Individual,New,Referral,2023-03-14,Suburban,N/A
+C1018,Individual,New,Referral,2022-04-28,Suburban,N/A
+C1019,Individual,Budget,Online,2024-02-10,Urban,N/A
+C1020,Corporate,Budget,Online,2024-06-09,Urban,Medium
+C1021,SME,Premium,Walk-in,2022-11-02,Other,Small
+C1022,Individual,Standard,Walk-in,2022-09-25,Urban,N/A
+C1023,Individual,New,Online,2022-02-23,Urban,N/A
+C1024,Individual,Budget,Sales Team,2022-08-24,Suburban,N/A
+C1025,Individual,Premium,Walk-in,2023-01-24,Other,N/A
+C1026,SME,Premium,Online,2024-01-04,Other,Medium
+C1027,SME,Budget,Walk-in,2024-02-02,Suburban,Small
+C1028,Corporate,Premium,Online,2024-04-04,Urban,Large
+C1029,Individual,Standard,Referral,2023-02-05,Urban,N/A
+C1030,Individual,Standard,Online,2023-09-16,Suburban,N/A
+C1031,SME,Budget,Walk-in,2024-02-06,Suburban,Small
+C1032,SME,Budget,Referral,2022-10-30,Urban,Small
+C1033,SME,Standard,Referral,2022-07-26,Other,Large
+C1034,SME,Budget,Referral,2022-08-17,Urban,Large
+C1035,Individual,Standard,Referral,2024-05-02,Urban,N/A
+C1036,Individual,Standard,Sales Team,2024-06-28,Urban,N/A
+C1037,Individual,Budget,Walk-in,2023-08-01,Urban,N/A
+C1038,Individual,Budget,Online,2022-03-16,Urban,N/A
+C1039,Individual,Budget,Referral,2023-03-11,Urban,N/A
+C1040,Individual,Budget,Online,2022-04-13,Urban,N/A
+C1041,SME,Standard,Online,2023-02-26,Suburban,Small
+C1042,Individual,Premium,Referral,2023-12-05,Suburban,N/A
+C1043,Individual,Standard,Online,2024-02-03,Suburban,N/A
+C1044,Corporate,Standard,Online,2024-01-08,Other,Medium
+C1045,Individual,Standard,Walk-in,2024-03-16,Urban,N/A
+C1046,Individual,New,Walk-in,2022-11-02,Urban,N/A
+C1047,SME,Standard,Referral,2022-04-08,Other,Small
+C1048,Individual,New,Online,2024-04-29,Urban,N/A
+C1049,Individual,Budget,Walk-in,2024-03-08,Other,N/A
+C1050,Individual,Budget,Online,2022-12-01,Urban,N/A
+C1051,Individual,Standard,Sales Team,2024-05-08,Other,N/A
+C1052,Corporate,Standard,Walk-in,2023-03-11,Urban,Medium
+C1053,SME,Standard,Referral,2023-03-23,Other,Small
+C1054,SME,Standard,Referral,2022-11-04,Suburban,Large
+C1055,Corporate,Budget,Walk-in,2022-09-06,Other,Small
+C1056,SME,Standard,Referral,2022-06-15,Urban,Small
+C1057,Individual,Premium,Online,2023-04-26,Suburban,N/A
+C1058,Corporate,Budget,Sales Team,2022-12-01,Other,Medium
+C1059,Individual,Standard,Online,2023-06-26,Suburban,N/A
+C1060,SME,New,Online,2024-01-29,Suburban,Small
+C1061,Corporate,New,Walk-in,2022-04-16,Suburban,Small
+C1062,Individual,New,Online,2023-07-17,Urban,N/A
+C1063,Individual,Standard,Online,2022-03-22,Suburban,N/A
+C1064,Individual,Premium,Sales Team,2022-05-13,Suburban,N/A
+C1065,Individual,New,Online,2024-03-07,Other,N/A
+C1066,SME,Standard,Sales Team,2024-06-18,Urban,Medium
+C1067,Corporate,New,Sales Team,2022-05-18,Urban,Medium
+C1068,Individual,New,Referral,2022-07-03,Other,N/A
+C1069,Individual,New,Referral,2023-02-05,Other,N/A
+C1070,Individual,Standard,Referral,2022-11-26,Urban,N/A
+C1071,Individual,Standard,Referral,2024-02-24,Suburban,N/A
+C1072,Individual,New,Referral,2023-05-23,Urban,N/A
+C1073,Individual,Standard,Walk-in,2024-05-01,Urban,N/A
+C1074,Corporate,Standard,Referral,2022-03-10,Urban,Medium
+C1075,Individual,Standard,Online,2023-06-30,Urban,N/A
+C1076,Individual,New,Walk-in,2024-02-13,Suburban,N/A
+C1077,SME,Budget,Referral,2022-02-22,Urban,Medium
+C1078,Individual,Standard,Walk-in,2023-03-26,Other,N/A
+C1079,Corporate,Premium,Online,2022-07-24,Other,Large
+C1080,Corporate,Budget,Referral,2022-05-06,Suburban,Large
+C1081,Individual,New,Walk-in,2024-01-17,Suburban,N/A
+C1082,Individual,Premium,Walk-in,2022-02-12,Urban,N/A
+C1083,Individual,Standard,Sales Team,2024-01-22,Suburban,N/A
+C1084,Individual,New,Walk-in,2024-06-01,Suburban,N/A
+C1085,Individual,Budget,Walk-in,2022-04-21,Urban,N/A
+C1086,SME,Budget,Online,2024-01-31,Other,Large
+C1087,Individual,Budget,Referral,2023-10-25,Suburban,N/A
+C1088,Individual,Standard,Walk-in,2022-07-02,Other,N/A
+C1089,Individual,Standard,Walk-in,2024-04-27,Suburban,N/A
+C1090,Corporate,Budget,Sales Team,2022-04-05,Suburban,Small
+C1091,Individual,Budget,Online,2023-01-09,Urban,N/A
+C1092,Individual,New,Online,2024-06-30,Other,N/A
+C1093,Individual,New,Walk-in,2023-06-04,Other,N/A
+C1094,Corporate,Standard,Online,2024-06-18,Urban,Medium
+C1095,Individual,Standard,Sales Team,2022-12-26,Urban,N/A
+C1096,SME,Budget,Sales Team,2024-06-18,Urban,Large
+C1097,SME,Budget,Online,2023-11-27,Suburban,Large
+C1098,Individual,Budget,Walk-in,2022-10-08,Other,N/A
+C1099,SME,Budget,Walk-in,2022-07-14,Urban,Medium
+C1100,Individual,New,Referral,2024-05-13,Suburban,N/A
+C1101,SME,Standard,Sales Team,2022-07-14,Urban,Large
+C1102,SME,Standard,Online,2023-10-29,Other,Small
+C1103,Individual,Premium,Walk-in,2022-04-03,Suburban,N/A
+C1104,Individual,Standard,Online,2023-11-03,Suburban,N/A
+C1105,SME,Premium,Sales Team,2022-03-02,Urban,Large
+C1106,Individual,Standard,Online,2023-09-26,Urban,N/A
+C1107,Individual,Standard,Referral,2022-02-20,Urban,N/A
+C1108,Individual,Standard,Sales Team,2023-02-07,Urban,N/A
+C1109,SME,Standard,Referral,2024-02-28,Other,Small
+C1110,SME,Premium,Online,2022-01-05,Suburban,Small
+C1111,Individual,Premium,Sales Team,2023-04-11,Other,N/A
+C1112,Individual,Budget,Sales Team,2023-08-27,Other,N/A
+C1113,Individual,Standard,Online,2023-11-13,Suburban,N/A
+C1114,SME,Premium,Walk-in,2024-04-08,Suburban,Large
+C1115,Individual,Standard,Online,2023-06-18,Other,N/A
+C1116,SME,Budget,Online,2023-02-09,Suburban,Medium
+C1117,Individual,Standard,Online,2024-04-17,Urban,N/A
+C1118,Corporate,Budget,Walk-in,2023-05-28,Urban,Medium
+C1119,Individual,Premium,Walk-in,2023-10-07,Urban,N/A
