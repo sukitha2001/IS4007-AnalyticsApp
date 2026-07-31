@@ -48,11 +48,11 @@ def render_revenue_forecasting():
     
             cols = st.columns(3)
             with cols[0]:
-                metric_card("Latest Actual", f"${latest_actual:,.0f}", "Most recent transaction month", "$")
+                metric_card("Latest Actual", f"{latest_actual:,.0f}", "Most recent transaction month", "$")
             with cols[1]:
-                metric_card("Next Forecast", f"${next_month:,.0f}", f"{forecast_change:+.1f}% vs latest actual", "$", "positive" if forecast_change >= 0 else "negative")
+                metric_card("Next Forecast", f"{next_month:,.0f}", f"{forecast_change:+.1f}% vs latest actual", "$", "positive" if forecast_change >= 0 else "negative")
             with cols[2]:
-                metric_card("Forecast Total", f"${forecast_total:,.0f}", f"Next {months_to_forecast} months", "▦", "positive")
+                metric_card("Forecast Total", f"${forecast_total:,.0f}", f"Next {months_to_forecast} months", "positive")
             
             # Plotting
             fig = go.Figure()
