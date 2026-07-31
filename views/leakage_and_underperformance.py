@@ -78,9 +78,9 @@ def render_leakage_and_underperformance():
     with col1:
         metric_card("Overdue Revenue", f"{overdue_amount:,.0f}", "Uncollected sales", "$", "negative")
     with col2:
-        metric_card("Value Given Away", f"{excessive_discount_loss:,.0f}", "High discount, low volume", "%", "negative")
+        metric_card("Value Given Away", f"${excessive_discount_loss:,.0f}", "High discount, low volume")
     with col3:
-        metric_card("Low Margin Revenue", f"{low_margin_revenue:,.0f}", "Sales with <10% margin", "!", "negative")
+        metric_card("Low Margin Revenue", f"${low_margin_revenue:,.0f}", "Sales with <10% margin")
         
     st.write("")
     
