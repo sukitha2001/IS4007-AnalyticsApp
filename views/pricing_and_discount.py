@@ -61,11 +61,11 @@ def render_pricing_and_discount():
 
     cols = st.columns(3)
     with cols[0]:
-        metric_card("Average Discount", f"{avg_discount:.1f}%", "Weighted across transactions", "%")
+        metric_card("Average Discount", f"{avg_discount:.1f}", "Weighted across transactions", "%")
     with cols[1]:
-        metric_card("Discount Value", f"${discount_cost:,.0f}", "Gross revenue given away", "$", "negative")
+        metric_card("Discount Value", f"{discount_cost:,.0f}", "Gross revenue given away", "$", "negative")
     with cols[2]:
-        metric_card("High Discount Sales", f"{high_discount_sales:,}", "Transactions above 15%", "!", "negative")
+        metric_card("High Discount Sales", f"{high_discount_sales:,}", "Transactions above 15%", "negative")
 
     st.write("")
     
