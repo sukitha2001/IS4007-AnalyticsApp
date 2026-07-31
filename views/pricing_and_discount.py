@@ -95,12 +95,28 @@ def render_pricing_and_discount():
         
     with col2:
         with st.container(border=True):
-            st.markdown("#### Discount Distribution by Customer Segment")
-            fig_box = px.box(df_cust, x='segment', y='discount_percentage', color='segment',
-                             title="Are we over-discounting to acquire vs retain?",
-                             color_discrete_sequence=px.colors.qualitative.Bold)
-            clean_plotly_layout(fig_box, height=380, showlegend=False)
-            st.plotly_chart(fig_box, use_container_width=True, config={"displayModeBar": False})
+            st.markdown("#### Revenue vs. Discount Cost by Segment")
+            df_cust['discount_value'] = df_cust['gross_revenue'] - df_cust['net_revenue']
+            seg_agg = df_cust.groupby('segment').agg(
+                Net_Revenue=('net_revenue', 'sum'),
+                Discount_Value=('discount_value', 'sum')
+            ).reset_index()
+            
+            seg_melt = seg_agg.melt(id_vars='segment', value_vars=['Net_Revenue', 'Discount_Value'],
+                                    var_name='Metric', value_name='Amount')
+            
+            fig_bar = px.bar(seg_melt, x='segment', y='Amount', color='Metric', barmode='group',
+                             title="Are discounts proportional to revenue brought in?",
+                             color_discrete_map={'Net_Revenue': '#3b82f6', 'Discount_Value': '#ef4444'})
+            
+            fig_bar.update_layout(legend_title_text='')
+            newnames = {'Net_Revenue': 'Net Revenue', 'Discount_Value': 'Discount Cost'}
+            fig_bar.for_each_trace(lambda t: t.update(name = newnames.get(t.name, t.name)))
+
+            clean_plotly_layout(fig_bar, height=380, showlegend=True)
+            # Move legend to top to save space
+            fig_bar.update_layout(legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1))
+            st.plotly_chart(fig_bar, use_container_width=True, config={"displayModeBar": False})
             
     st.write("")
     col3, col4 = st.columns(2)
