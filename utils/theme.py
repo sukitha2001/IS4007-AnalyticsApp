@@ -101,7 +101,45 @@ def clean_plotly_layout(fig, height=390, showlegend=False):
     return fig
 
 def metric_card(title, value, description, prefix="", trend="neutral"):
-    st.metric(label=title, value=f"{prefix}{value}", help=description)
+    if trend == "positive":
+        color = "#10b981"
+        icon = "📈"
+    elif trend == "negative":
+        color = "#ef4444"
+        icon = "📉"
+    else:
+        color = "#3b82f6"
+        icon = "📊"
+        
+    # Some usages pass an icon symbol as prefix
+    if prefix in ["▣", "▦", "◎", "!", "💰", "👥", "🛒", "⚡", "%"]:
+        if prefix != "%":
+            icon = prefix
+            prefix = ""
+    
+    st.html(f"""
+    <div style="
+        background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-top: 2px solid {color};
+        border-radius: 12px;
+        padding: 1.4rem 1.5rem 1.2rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    ">
+        <div style="
+            position: absolute; top: -20px; right: -10px;
+            font-size: 5rem; opacity: 0.06; user-select: none;
+        ">{icon}</div>
+        <p style="margin:0 0 0.5rem; font-size:0.75rem; font-weight:600;
+                  text-transform:uppercase; letter-spacing:0.08em;
+                  color:{color};">{title}</p>
+        <p style="margin:0 0 0.4rem; font-size:2rem; font-weight:800;
+                  color:#f1f5f9; line-height:1.1;">{prefix}{value}</p>
+        <p style="margin:0; font-size:0.78rem; color:#64748b;">{description}</p>
+    </div>
+    """)
 
 def page_header(title, description, badge=""):
     st.markdown(f"<h2>{title} <span style='font-size: 0.5em; color: gray;'>{badge}</span></h2>", unsafe_allow_html=True)
