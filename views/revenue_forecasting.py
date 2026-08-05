@@ -83,29 +83,25 @@ def render_revenue_forecasting():
             rmse = np.sqrt(np.mean((actual_aligned - valid) ** 2))
             mape = np.mean(np.abs((actual_aligned - valid) / actual_aligned)) * 100
 
-            # ── KPI Metric Cards ──
+            # ── Combined KPI Metric Cards ──
             next_month = forecast_df["forecast"].iloc[0]
             forecast_total = forecast_df["forecast"].sum()
             latest_actual = ts_data["net_revenue"].iloc[-1]
             forecast_change = ((next_month - latest_actual) / latest_actual) * 100 if latest_actual else 0
 
-            cols = st.columns(3)
+            cols = st.columns(6)
             with cols[0]:
-                metric_card("Latest Actual", f"${latest_actual:,.0f}", "Most recent transaction month")
+                metric_card("Latest Actual", f"${latest_actual:,.0f}", "Most recent month")
             with cols[1]:
-                metric_card("Next Forecast", f"${next_month:,.0f}", f"{forecast_change:+.1f}% vs latest actual")
+                metric_card("Next Forecast", f"${next_month:,.0f}", f"{forecast_change:+.1f}% vs actual")
             with cols[2]:
                 metric_card("Forecast Total", f"${forecast_total:,.0f}", f"Next {months_to_forecast} months")
-
-            # ── Forecast Accuracy Metrics ──
-            st.markdown("#### Model accuracy (in-sample)")
-            err_cols = st.columns(3)
-            with err_cols[0]:
+            with cols[3]:
                 metric_card("MAE", f"${mae:,.0f}", "Mean Absolute Error")
-            with err_cols[1]:
+            with cols[4]:
                 metric_card("RMSE", f"${rmse:,.0f}", "Root Mean Squared Error")
-            with err_cols[2]:
-                metric_card("MAPE", f"{mape:.1f}%", "Mean Absolute Percentage Error")
+            with cols[5]:
+                metric_card("MAPE", f"{mape:.1f}%", "Mean Abs. % Error")
             
             # ── Main Forecast Chart with Scenario Bands ──
             # Bridge: prepend last historical point so the lines connect
