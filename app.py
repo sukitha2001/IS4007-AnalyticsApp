@@ -115,15 +115,38 @@ if selection == "Executive Revenue Analytics":
                 active_now = len(filtered_sales[filtered_sales['transaction_date'] >= (last_date - pd.Timedelta(days=30))]['customer_id'].unique())
             else:
                 active_now = 0
-            cols = st.columns(4)
-            with cols[0]:
-                st.metric(label="Total Revenue", value=f"${total_revenue:,.0f}", help="Lifetime revenue")
-            with cols[1]:
-                st.metric(label="Customers", value=f"{unique_customers:,}", help="Unique buyers")
-            with cols[2]:
-                st.metric(label="Sales", value=f"{total_sales:,}", help="Total transactions")
-            with cols[3]:
-                st.metric(label="Active (30d)", value=f"{active_now:,}", help="Active customers recently")
+            kpi_cards = [
+                {"icon": "💰", "label": "Total Revenue",  "value": f"${total_revenue:,.0f}", "desc": "Lifetime net revenue",          "color": "#3b82f6"},
+                {"icon": "👥", "label": "Customers",       "value": f"{unique_customers:,}",  "desc": "Unique buyers",                "color": "#8b5cf6"},
+                {"icon": "🛒", "label": "Total Sales",     "value": f"{total_sales:,}",        "desc": "Total transactions",           "color": "#10b981"},
+                {"icon": "⚡", "label": "Active (30d)",    "value": f"{active_now:,}",         "desc": "Customers active recently",    "color": "#f59e0b"},
+            ]
+            kpi_cols = st.columns(4)
+            for col, card in zip(kpi_cols, kpi_cards):
+                with col:
+                    st.html(f"""
+                    <div style="
+                        background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+                        border: 1px solid rgba(255,255,255,0.08);
+                        border-top: 2px solid {card['color']};
+                        border-radius: 12px;
+                        padding: 1.4rem 1.5rem 1.2rem;
+                        position: relative;
+                        overflow: hidden;
+                        box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+                    ">
+                        <div style="
+                            position: absolute; top: -20px; right: -10px;
+                            font-size: 5rem; opacity: 0.06; user-select: none;
+                        ">{card['icon']}</div>
+                        <p style="margin:0 0 0.5rem; font-size:0.75rem; font-weight:600;
+                                  text-transform:uppercase; letter-spacing:0.08em;
+                                  color:{card['color']};">{card['label']}</p>
+                        <p style="margin:0 0 0.4rem; font-size:2rem; font-weight:800;
+                                  color:#f1f5f9; line-height:1.1;">{card['value']}</p>
+                        <p style="margin:0; font-size:0.78rem; color:#64748b;">{card['desc']}</p>
+                    </div>
+                    """)
 
             st.write("")  # spacing
             st.write("")
