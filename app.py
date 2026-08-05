@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit_shadcn_ui as ui
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
@@ -42,8 +41,14 @@ pages = [
     "Recommendations"
 ]
 
-# Use shadcn tabs for a clean, animated, circle-free navigation bar
-selection = ui.tabs(options=pages, default_value="Executive Revenue Analytics", key="main_nav")
+# Top navigation using segmented control
+selection = st.segmented_control(
+    label="Navigation",
+    options=pages,
+    default="Executive Revenue Analytics",
+    key="main_nav",
+    label_visibility="collapsed",
+)
 
 st.markdown("<hr style='margin-top: 0; margin-bottom: 2rem; border-color: rgba(128,128,128,0.2);'>", unsafe_allow_html=True)
 
@@ -88,8 +93,13 @@ if selection == "Executive Revenue Analytics":
 
         st.write("") # Spacing after filters
 
-        tabs = ui.tabs(options=['Overview', 'Analytics', 'Reports'],
-                       default_value='Overview', key="main_tabs")
+        tabs = st.segmented_control(
+            label="View",
+            options=['Overview', 'Analytics', 'Reports'],
+            default='Overview',
+            key="main_tabs",
+            label_visibility="collapsed",
+        )
 
         if filtered_sales.empty:
             st.warning("No data available for the selected filters.")
@@ -107,21 +117,13 @@ if selection == "Executive Revenue Analytics":
                 active_now = 0
             cols = st.columns(4)
             with cols[0]:
-                ui.metric_card(title="Total Revenue",
-                               content=f"${total_revenue:,.0f}",
-                               description="Lifetime revenue", key="m1")
+                st.metric(label="Total Revenue", value=f"${total_revenue:,.0f}", help="Lifetime revenue")
             with cols[1]:
-                ui.metric_card(title="Customers",
-                               content=f"{unique_customers:,}",
-                               description="Unique buyers", key="m2")
+                st.metric(label="Customers", value=f"{unique_customers:,}", help="Unique buyers")
             with cols[2]:
-                ui.metric_card(title="Sales",
-                               content=f"{total_sales:,}",
-                               description="Total transactions", key="m3")
+                st.metric(label="Sales", value=f"{total_sales:,}", help="Total transactions")
             with cols[3]:
-                ui.metric_card(title="Active (30d)",
-                               content=f"{active_now:,}",
-                               description="Active customers recently", key="m4")
+                st.metric(label="Active (30d)", value=f"{active_now:,}", help="Active customers recently")
 
             st.write("")  # spacing
             st.write("")

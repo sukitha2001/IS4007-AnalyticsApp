@@ -86,8 +86,7 @@ def apply_theme():
         </style>
     """, unsafe_allow_html=True)
 
-import streamlit_shadcn_ui as ui
-import html
+
 
 def clean_plotly_layout(fig, height=390, showlegend=False):
     fig.update_layout(
@@ -102,17 +101,27 @@ def clean_plotly_layout(fig, height=390, showlegend=False):
     return fig
 
 def metric_card(title, value, description, prefix="", trend="neutral"):
-    ui.metric_card(title=title, content=f"{prefix}{value}", description=description)
+    st.metric(label=title, value=f"{prefix}{value}", help=description)
 
 def page_header(title, description, badge=""):
     st.markdown(f"<h2>{title} <span style='font-size: 0.5em; color: gray;'>{badge}</span></h2>", unsafe_allow_html=True)
     st.markdown(f"<p style='color: gray; margin-bottom: 24px;'>{description}</p>", unsafe_allow_html=True)
 
 def tabs(label, options, key, default_value):
-    return ui.tabs(options=options, default_value=default_value, key=key)
+    return st.segmented_control(
+        label=label,
+        options=options,
+        default=default_value,
+        key=key,
+        label_visibility="collapsed",
+    )
 
 def escape(text):
+    import html
     return html.escape(str(text))
 
 def recommendation_card(title, content, description, variant="high"):
-    ui.card(title=title, content=content, description=description)
+    with st.container(border=True):
+        st.markdown(f"**{title}**")
+        st.write(content)
+        st.caption(description)
