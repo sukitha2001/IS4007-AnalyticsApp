@@ -54,17 +54,17 @@ def render_customer_analytics():
         
         def segment_customer(df):
             if df['RFM_Score'] == '333':
-                return 'Core - Best Customers'
+                return 'Champions'
             elif df['F'] == 3:
-                return 'Loyal'
-            elif df['M'] == 3:
-                return 'Big Spenders'
+                return 'Loyal Customers'
             elif df['R'] == 3:
-                return 'New / Active'
+                return 'Recent Customers'
+            elif df['R'] == 1 and df['F'] == 1:
+                return 'Lost'
             elif df['R'] == 1:
-                return 'At Risk / Lost'
+                return 'At Risk'
             else:
-                return 'Regular'
+                return 'Others'
                 
         rfm['Segment'] = rfm.apply(segment_customer, axis=1)
         
@@ -77,7 +77,7 @@ def render_customer_analytics():
         with cols[1]:
             metric_card("Best Segment", best_segment, "Highest revenue contribution", "◎")
         with cols[2]:
-            metric_card("At Risk", f"{(rfm['Segment'] == 'At Risk / Lost').sum():,}", "Customers needing attention", "!", "negative")
+            metric_card("At Risk", f"{(rfm['Segment'].isin(['At Risk', 'Lost'])).sum():,}", "Customers needing attention", "!", "negative")
     
         st.write("")
         active_tab = tabs("Customer sections", ['RFM Analysis', 'K-Means Clustering', 'Top Customers'], "cust_tabs", 'RFM Analysis')
